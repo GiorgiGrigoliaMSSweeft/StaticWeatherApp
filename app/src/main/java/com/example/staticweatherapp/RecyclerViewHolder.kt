@@ -10,18 +10,22 @@ sealed class RecyclerViewHolder(binding: ViewBinding) : RecyclerView.ViewHolder(
 
     class TodaysWeatherViewHolder(private val binding: ItemTodaysWeatherBinding) : RecyclerViewHolder(binding) {
         fun bind(item: Item.TodaysWeatherItem) {
-            binding.todaysWeatherIcon.setImageResource(item.weatherIcon)
-            binding.weatherText.setText(item.weatherText)
-            binding.weatherDegrees.setText(item.weatherDegrees)
-            binding.feelsLikeDegrees.setText(item.feelsLikeDegrees)
+            binding.apply {
+                todaysWeatherIcon.setImageResource(item.weatherIcon)
+                weatherText.setText(item.weatherText)
+                weatherDegrees.setText(item.weatherDegrees)
+                feelsLikeDegrees.setText(item.feelsLikeDegrees)
+            }
         }
     }
 
     class WeatherViewHolder(private val binding: ItemWeatherForecastBinding) : RecyclerViewHolder(binding) {
         fun bind(item: Item.WeatherItem) {
-            binding.date.setText(item.date)
-            binding.weatherIcon.setImageResource(item.weatherIcon)
-            binding.degrees.setText(item.degrees)
+            binding.apply {
+                date.setText(item.date)
+                weatherIcon.setImageResource(item.weatherIcon)
+                degrees.setText(item.degrees)
+            }
         }
     }
 }

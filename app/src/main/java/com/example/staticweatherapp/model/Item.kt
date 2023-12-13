@@ -5,6 +5,7 @@ import androidx.annotation.StringRes
 
 sealed class Item {
     data class TodaysWeatherItem(
+        val id: Int,
         @DrawableRes val weatherIcon: Int,
         @StringRes val weatherText: Int,
         @StringRes val weatherDegrees: Int,
@@ -12,6 +13,7 @@ sealed class Item {
     ) : Item()
 
     data class WeatherItem(
+        val id: Int,
         @StringRes val date: Int,
         @DrawableRes val weatherIcon: Int,
         @StringRes val degrees: Int
