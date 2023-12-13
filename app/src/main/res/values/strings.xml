@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">StaticWeatherApp</string>
+    <string name="todays_weather_text">SUNNY</string>
+    <string name="todays_weather_degrees">9°</string>
+    <string name="todays_feels_like_degrees">feels like 6°</string>
+
+    <string name="weather_item_1_date">Wed, October 4</string>
+    <string name="weather_item_2_date">Thu, October 5</string>
+    <string name="weather_item_3_date">Fri, October 6</string>
+    <string name="weather_item_4_date">Sat, October 7</string>
+    <string name="weather_item_5_date">Sun, October 8</string>
+    <string name="weather_item_6_date">Mon, October 9</string>
+    <string name="weather_item_7_date">Tue, October 10</string>
+
+
+    <string name="weather_item_1_degrees">6°</string>
+    <string name="weather_item_2_degrees">8°</string>
+    <string name="weather_item_3_degrees">7°</string>
+    <string name="weather_item_4_degrees">8°</string>
+    <string name="weather_item_5_degrees">7°</string>
+    <string name="weather_item_6_degrees">7°</string>
+    <string name="weather_item_7_degrees">9°</string>
+</resources>

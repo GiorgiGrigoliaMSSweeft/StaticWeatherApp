@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemTodaysWeather"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/item_todays_weather_background_color">
+
+    <ImageView
+        android:id="@+id/todaysWeatherIcon"
+        android:layout_width="@dimen/todays_weather_icon_width_and_height"
+        android:layout_height="@dimen/todays_weather_icon_width_and_height"
+        android:layout_marginStart="@dimen/todays_weather_icon_margin_start"
+        android:layout_marginTop="@dimen/todays_weather_icon_margin_top"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/weatherText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/weather_text_margin_start"
+        android:layout_marginTop="@dimen/weather_text_margin_top"
+        android:layout_marginBottom="@dimen/weather_text_margin_bottom"
+        android:textColor="@color/item_todays_text_color"
+        android:textSize="@dimen/weather_text_font_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todaysWeatherIcon"
+        tools:text="SUNNY" />
+
+    <TextView
+        android:id="@+id/weatherDegrees"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/weather_degrees_margin_end"
+        android:textAlignment="textEnd"
+        android:textColor="@color/item_todays_text_color"
+        android:textSize="@dimen/weather_degrees_font_size"
+        app:layout_constraintBottom_toBottomOf="@+id/todaysWeatherIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/todaysWeatherIcon"
+        app:layout_constraintTop_toTopOf="@+id/todaysWeatherIcon"
+        tools:text="9°" />
+
+    <TextView
+        android:id="@+id/feelsLikeDegrees"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textColor="@color/item_todays_text_color"
+        app:layout_constraintBottom_toBottomOf="@+id/weatherText"
+        app:layout_constraintEnd_toEndOf="@+id/weatherDegrees"
+        app:layout_constraintStart_toEndOf="@+id/weatherText"
+        app:layout_constraintTop_toTopOf="@+id/weatherText"
+        tools:text="feels like 6°" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
