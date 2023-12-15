@@ -1,24 +1,31 @@
 package com.example.staticweatherapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.staticweatherapp.data.weatherForecastItems
+import android.view.Menu
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 import com.example.staticweatherapp.databinding.ActivityMainBinding
+import com.example.staticweatherapp.fragments.WeatherForecastFragment
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-    private val recyclerViewAdapter by lazy { RecyclerViewAdapter() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
 
-        binding.weatherRecyclerView.apply {
-            adapter = recyclerViewAdapter
-            layoutManager = LinearLayoutManager(this@MainActivity)
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add<WeatherForecastFragment>(R.id.weatherForecastFragmentContainer)
+            }
         }
+    }
 
-        recyclerViewAdapter.submitList(weatherForecastItems)
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.toolbar_button, menu)
+        return true
     }
 }

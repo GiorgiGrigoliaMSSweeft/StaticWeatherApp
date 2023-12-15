@@ -27,6 +27,7 @@
         android:layout_marginBottom="@dimen/weather_text_margin_bottom"
         android:textColor="@color/item_todays_text_color"
         android:textSize="@dimen/weather_text_font_size"
+        app:layout_constraintEnd_toStartOf="@id/feelsLikeDegrees"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/todaysWeatherIcon"
