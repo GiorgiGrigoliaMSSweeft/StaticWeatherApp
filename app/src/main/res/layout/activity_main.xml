@@ -18,12 +18,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/switchFragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout="@layout/fragment_switcher" />
+
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/weatherForecastFragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/switchFragmentContainer"
         tools:layout="@layout/fragment_weather_forecast" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_favorite"
+        android:id="@+id/accessibility_icon"
         android:icon="@drawable/baseline_accessibility_new_24"
         android:title="@null"
         app:showAsAction="always" />
